@@ -50,6 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Home';
-$route['factor/(:any)'] = 'FactorController/index/$1';
+$route['factor/payback']['POST']= 'FactorController/payback';
+$route['factor/payback']['GET']	= 'FactorController/payback';
+$route['factor/(:any)']['GET']	= 'FactorController/index/$1';
+$route['factor/(:any)']['POST'] = 'FactorController/index/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

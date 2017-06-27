@@ -14,21 +14,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <div class="row">
         <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            
+            <?php if($factor->paid): ?>
+            <div class="alert alert-success">فاکتور پرداخت شده</div>
+            <?php endif; ?>
             <div class="text-center">
                 <h1>فاکتور</h1>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
-                	<em>به نام: <?=$name?></em>
+                	<em>به نام: <?=$factor->name?></em>
                 	<br>
-                	<em>شماره تلفن: <?=$phone?></em>
+                	<em>شماره تلفن: <?=$factor->phone?></em>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 text-right">
                     <p>
-                        <em>تاریخ: <?=$jtime?></em>
+                        <em>تاریخ: <?=$this->jdf->jdate('j F Y', time())?></em>
                     </p>
                     <p>
-                        <em>شماره رسید #: <?=$receipt_code?></em>
+                        <em>شماره رسید #: <?=$factor->receipt_code?></em>
                     </p>
                 </div>
             </div>
@@ -49,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  	<?php 
 				  	  $sum = 0;
 				  	  $i = 0;
-					  foreach ($items_data as $row) {
+					  foreach ($items as $row) {
 					  	$i++;
 					  	$sum += $row->price;
 					  	echo "<tr>
@@ -63,10 +67,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</table>
 
 				<h3>قیمت کل : <?=$sum?></h3> 
-
-                <button type="button" class="btn btn-success btn-lg btn-block">
+                
+                <form action="<?=base_url(uri_string())?>" method="post">
+                <button type="submit" name="btn" value="1" class="btn btn-success btn-lg btn-block" <?php if($factor->paid) echo "disabled"; ?>>
                     پرداخت نهایی   <span class="glyphicon glyphicon-chevron-right"></span>
-                </button></td>
+                </button>
+                </form></td>
             </div>
         </div>
     </div>
