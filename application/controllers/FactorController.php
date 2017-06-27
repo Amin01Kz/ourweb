@@ -33,7 +33,8 @@ class FactorController extends CI_Controller {
 				// items_data in $factor[2] 
 				//echo "pardakht nashode";
 				$this->load->view('checkout', [
-					'data' => $factor
+					'factor_data'	=> $factor[1],
+					'items_data'	=> $factor[2]
 				]);
 				break;
 			case 'paid':

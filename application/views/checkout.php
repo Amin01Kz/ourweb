@@ -17,9 +17,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</style>
 </head>
 <body>
-<?php 
-var_dump($data);
- ?>
 <div class="container">
     <div class="row">
         <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
@@ -61,8 +58,8 @@ var_dump($data);
                     <tbody>
 
                     <?php
-                    	foreach ($data[2] as $key) {
-                    		echo $key->title;
+                    	foreach ($items_data as $row) {
+                    		echo $row->title;
                     	}
                     ?>
 
