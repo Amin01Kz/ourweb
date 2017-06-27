@@ -20,6 +20,26 @@ class FactorController extends CI_Controller {
 	 */
 	public function index($code)
 	{
-		echo $code;
+		$this->load->model('Factor_model');
+		$factor = $this->Factor_model->check_exist($code);
+		switch ($factor[0]) {
+			case 'not_exist':
+				// return view not_exist
+				echo "vojod nadare";
+				break;
+			case 'not_paid':
+				// return factor view
+				// factor_data in $factor[1] 
+				// items_data in $factor[2] 
+				echo "pardakht nashode";
+				break;
+			case 'paid':
+				// return view paid
+				echo "pardakht shode";
+				break;
+			default:
+				# code...
+				break;
+		}
 	}
 }
