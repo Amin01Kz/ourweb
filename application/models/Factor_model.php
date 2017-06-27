@@ -17,7 +17,7 @@ class Factor_model extends CI_Model {
             // factor items information 
             $items_data  = $this->db->get_where('factor_items', [
                 'factor_id'  => $factor_data->id
-            ]);
+            ])->result()[0];
             return ["not_paid", $factor_data, $items_data];
         }
         return ["not_exist"];
