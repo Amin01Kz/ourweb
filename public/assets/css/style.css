@@ -1,4 +1,12 @@
+@font-face{
+	font-family: "irweb";
+    src: url('../fonts/IRANSans/IRANSansWeb.ttf');
+    src: local('IRANSansWeb'), url('../fonts/IRANSans/IRANSansWeb.woff') format('woff'), url('../fonts/IRANSans/IRANSansWeb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
+	font-family: 'irweb';
 	direction: rtl;
 }
 th, td {
