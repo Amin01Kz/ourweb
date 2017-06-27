@@ -12,7 +12,7 @@ class Factor_model extends CI_Model {
                 return ["paid"];
             }
             // factor information client name, date
-            $factor_data = $query->result()[0];
+            $factor_data = $query->result();
 
             // factor items information 
             $items_data  = $this->db->get_where('factor_items', [

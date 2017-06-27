@@ -31,7 +31,10 @@ class FactorController extends CI_Controller {
 				// return factor view
 				// factor_data in $factor[1] 
 				// items_data in $factor[2] 
-				echo "pardakht nashode";
+				//echo "pardakht nashode";
+				$this->load->view('checkout', [
+					'data' => $factor
+				]);
 				break;
 			case 'paid':
 				// return view paid
