@@ -24,25 +24,34 @@ class FactorController extends CI_Controller {
 		$factor = $this->Factor_model->check_exist($code);
 		switch ($factor[0]) {
 			case 'not_exist':
-				// return view not_exist
-				echo "vojod nadare";
+				show_404();
 				break;
 			case 'not_paid':
-				// return factor view
 				// factor_data in $factor[1] 
 				// items_data in $factor[2] 
 				//echo "pardakht nashode";
 				$this->load->view('checkout', [
-					'factor_data'	=> $factor[1],
-					'items_data'	=> $factor[2]
+					'code'			=> $factor[1]->code,
+					'name'			=> $factor[1]->name,
+					'phone'			=> $factor[1]->phone,
+					'receipt_code'  => $factor[1]->receipt_code,
+					'items_data'	=> $factor[2],
+					'jtime' 		=> $this->jdf->jdate('j F Y', time())
 				]);
 				break;
 			case 'paid':
 				// return view paid
-				echo "pardakht shode";
+				$this->load->view('checkout', [
+					'code'			=> $factor[1]->code,
+					'name'			=> $factor[1]->name,
+					'phone'			=> $factor[1]->phone,
+					'receipt_code'  => $factor[1]->receipt_code,
+					'items_data'	=> $factor[2],
+					'jtime' 		=> 'فعلا وجود ندارد'
+				]);
 				break;
 			default:
-				# code...
+				$this->load->view('errors/html/error_404');
 				break;
 		}
 	}
