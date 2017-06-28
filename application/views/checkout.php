@@ -8,12 +8,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="<?=base_url()?>public/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?=base_url()?>public/assets/css/style.css">
-
+	<style type="text/css">
+		.factor-box{
+			background: #FFF;
+			padding: 30px;
+			border: 1px solid #E1E1E1;
+			margin-top: 35px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 10px #e1e1e1;
+			color: #656565;
+		}
+		.total-price{
+			text-align: center;
+			padding: 12px;
+			margin: 0 0 15px 0;
+			font-size: 16px;
+			color: #3c763d;
+			background-color: #dff0d8;
+			border: 1px solid #bcd4bc;
+			border-radius: 5px;
+		}
+	</style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+        <div class="factor-box col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
 
 	        <?php if ( $msg = $this->session->flashdata('error_msg') ): ?>
 	        	<div class="alert alert-danger">
@@ -44,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <em>تاریخ: <?=$this->jdf->jdate('j F Y', time())?></em>
                     </p>
                     <p>
-                        <em>شماره رسید #: <?=$factor->receipt_code?></em>
+                        <em>شماره رسید : <?=$factor->receipt_code?>#</em>
                     </p>
                 </div>
             </div>
@@ -71,14 +91,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					  	echo "<tr>
 					      		<th scope=\"row\">$i</th>
 						      	<td>$row->title</td>
-						      	<td>$row->price</td>
+						      	<td>".number_format($row->price)." تومان</td>
 					    	</tr>";
 					  }
 				  ?>
 				  </tbody>
 				</table>
 
-				<h3>قیمت کل : <?=$sum?></h3> 
+				<h3 class="col-sm-4 total-price">قیمت کل : <?=number_format($sum)?> تومان</h3> 
                 
                 <form action="<?=base_url(uri_string())?>" method="post">
                 <button type="submit" name="btn" value="1" class="btn btn-success btn-lg btn-block" <?php if($factor->paid) echo "disabled"; ?>>
