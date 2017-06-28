@@ -14,7 +14,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <div class="row">
         <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
-            
+
+	        <?php if ($msg = $this->session->flashdata('error_msg') ): ?>
+	        	<div class="alert alert-danger">
+					<strong>خطایی رخ داد</strong> <?=$msg?>
+				</div>
+	        <?php endif ?>
+
+	        <?php if ($msg = $this->session->flashdata('success_msg') ): ?>
+	        	<div class="alert alert-danger">
+					<strong>تبریک</strong> <?=$msg?>
+				</div>
+	        <?php endif ?>
+
             <?php if($factor->paid): ?>
             <div class="alert alert-success">فاکتور پرداخت شده</div>
             <?php endif; ?>

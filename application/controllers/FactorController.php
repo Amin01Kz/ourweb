@@ -20,7 +20,6 @@ class FactorController extends CI_Controller {
 	 */
 	public function index($code)
 	{
-		$this->load->helper('url');
 		$this->load->model('Factor_model');
 		$factor = $this->Factor_model->check_exist([
             'code'  => $code
@@ -85,7 +84,7 @@ class FactorController extends CI_Controller {
 		}
 	}
 
-	public function payback(){
+	public function payback() {
 		$this->load->helper('url');
 		if( !is_null($this->input->post('status')) )
         {
@@ -111,21 +110,28 @@ class FactorController extends CI_Controller {
                     	]
                     	);
                     $result = $client->PaymentVerification($parameters);
-                }catch (Exception $e) { return 'Error'. $e->getMessage();  }
+                } catch (Exception $e) { return 'Error'. $e->getMessage(س);  }
         
-                if ($result == 1){
+                if ($result == 1) {
                 	$this->load->model('Factor_model');
                 	$this->Factor_model->update($order_id, ['paid'	=> 1]);
                 	$code = $this->Factor_model->get_factor(['id' => $order_id])->code;
-                	redirect(base_url('factor/'.$code));
+                  	$this->session->set_flashdata('success_msg','پردخا شما با موفقیت انجام شد');
+                	redirect( base_url('factor/'.$code) );
                 }
-                else
-                	echo "ناموفق";
+                else {
+                	$this->session->set_flashdata('error_msg','متاسفانه پرداخت شما نا موفق بود');
+                	redirect( base_url('factor/'.$code) ); 
+                }
             }
-            else
-            	echo "ناموفق";
+            else {
+                $this->session->set_flashdata('error_msg','متاسفانه پرداخت شما نا موفق بود');
+                redirect( base_url('factor/'.$code) ); 
+            }
         }
-        else
-            echo "ناموفق";
+        else {
+        	$this->session->set_flashdata('error_msg','متاسفانه پرداخت شما نا موفق بود');
+        	redirect( base_url('factor/'.$code) ); 
+        }
 	}
 }
