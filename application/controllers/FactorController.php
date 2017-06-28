@@ -59,6 +59,7 @@ class FactorController extends CI_Controller {
 			            echo 'Error'. $e->getMessage();
 			        }
 			        if( isset($result) && $result > 0 ){
+			        	$this->session->set_flashdata('factor_code', $factor[1]->code);
 			            redirect('http://startpay.ir/?tid='.$result);
 			        }
 			        else
@@ -86,6 +87,7 @@ class FactorController extends CI_Controller {
 
 	public function payback() {
 		$this->load->helper('url');
+		$code = $this->session->flashdata('factor_code');
 		if( !is_null($this->input->post('status')) )
         {
             $order_id   = $this->input->post('order_id');
@@ -115,7 +117,6 @@ class FactorController extends CI_Controller {
                 if ($result == 1) {
                 	$this->load->model('Factor_model');
                 	$this->Factor_model->update($order_id, ['paid'	=> 1]);
-                	$code = $this->Factor_model->get_factor(['id' => $order_id])->code;
                   	$this->session->set_flashdata('success_msg','پرداخت شما با موفقیت انجام شد');
                 	redirect( base_url('factor/'.$code) );
                 }
