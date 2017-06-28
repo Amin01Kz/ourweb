@@ -110,13 +110,13 @@ class FactorController extends CI_Controller {
                     	]
                     	);
                     $result = $client->PaymentVerification($parameters);
-                } catch (Exception $e) { return 'Error'. $e->getMessage(س);  }
+                } catch (Exception $e) { return 'Error'. $e->getMessage();  }
         
                 if ($result == 1) {
                 	$this->load->model('Factor_model');
                 	$this->Factor_model->update($order_id, ['paid'	=> 1]);
                 	$code = $this->Factor_model->get_factor(['id' => $order_id])->code;
-                  	$this->session->set_flashdata('success_msg','پردخا شما با موفقیت انجام شد');
+                  	$this->session->set_flashdata('success_msg','پرداخت شما با موفقیت انجام شد');
                 	redirect( base_url('factor/'.$code) );
                 }
                 else {
@@ -131,7 +131,7 @@ class FactorController extends CI_Controller {
         }
         else {
         	$this->session->set_flashdata('error_msg','متاسفانه پرداخت شما نا موفق بود');
-        	redirect( base_url('factor/'.$code) ); 
+        	return redirect( base_url('factor/'.$code) );
         }
 	}
 }
