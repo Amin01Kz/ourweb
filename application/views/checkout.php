@@ -34,7 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <div class="row">
         <div class="factor-box col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
-
 	        <?php if ( $msg = $this->session->flashdata('error_msg') ): ?>
 	        	<div class="alert alert-danger">
 					<strong>خطایی رخ داد</strong> <?=$msg?>
@@ -102,15 +101,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
                 <form action="<?=base_url(uri_string())?>" method="post">
                 <button type="submit" name="btn" value="1" class="btn btn-success btn-lg btn-block" <?php if($factor->paid) echo "disabled"; ?>>
-                    پرداخت نهایی   <span class="glyphicon glyphicon-chevron-right"></span>
+                    تایید و پرداخت</span>
                 </button>
                 </form></td>
             </div>
         </div>
     </div>
-
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="<?=base_url()?>public/assets/js/boostrap.min.js"></script>
 </body>
 </html>
