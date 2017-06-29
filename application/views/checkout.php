@@ -76,7 +76,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<table class="table table-hover table-bordered results">
 				  <thead>
 				    <tr">
-				    {elapsed_time} 
 				      <th class="col-md-1 col-xs-1">#</th>
 				      <th class="col-md-5 col-xs-5">نام</th>
 				      <th class="col-md-1 col-xs-3">قیمت</th>
