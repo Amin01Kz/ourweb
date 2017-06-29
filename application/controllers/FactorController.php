@@ -58,7 +58,7 @@ class FactorController extends CI_Controller {
 			        catch (Exception $e) { 
 			            echo 'Error'. $e->getMessage();
 			        }
-			        if( isset($result) && $result > 0 ){
+			        if( isset($result) && $result > 0 ) {
 			        	$this->session->set_flashdata('factor_code', $factor[1]->code);
 			            redirect('http://startpay.ir/?tid='.$result);
 			        }
@@ -86,7 +86,6 @@ class FactorController extends CI_Controller {
 	}
 
 	public function payback() {
-		$this->load->helper('url');
 		$code = $this->session->flashdata('factor_code');
 		if( !is_null($this->input->post('status')) )
         {
