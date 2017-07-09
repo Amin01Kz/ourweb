@@ -60,14 +60,14 @@
 
         <section id="carousel-1" class="carousel slide section-slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="item active" style="background: url(<?=base_url()?>/public/images/bg-1.jpg);">
-              <div class="container"><img src="images/typo-1.png" alt="First slide"></div>
+            <div class="item active" style="background: url();">
+              <div class="container"><img src="<?=base_url()?>/public/images/slider2.jpeg" alt="First slide"></div>
             </div>
-            <div class="item" style="background: url(<?=base_url()?>/public/images/bg-2.jpg);">
-              <div class="container"><img src="<?=base_url()?>/public/images/typo-2.png" alt="Second slide"></div>
+            <div class="item" style="background: url();">
+              <div class="container"><img src="<?=base_url()?>/public/images/slider3.png" alt="Second slide"></div>
             </div>
-            <div class="item" style="background: url(<?=base_url()?>/public/images/bg-3.jpg);">
-              <div class="container"><img src="<?=base_url()?>/public/images/typo-1.png" alt="Third slide"></div>
+            <div class="item" style="background: url();">
+              <div class="container"><img src="<?=base_url()?>/public/images/slider4.png" alt="Third slide"></div>
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-1" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
@@ -273,20 +273,20 @@
               <div class="carousel-inner">
                 <div class="item active">
                   <blockquote>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-                    <small>کسی معروف در <cite title="Source Title">شرکت شما</cite></small>
+                    <p>واقعا عالیه قیمت ها نسبت به طراحی فوق العادن</p>
+                    <small>کسی معروف در <cite title="Source Title">مدرسان شریف</cite></small>
                   </blockquote>
                 </div>
                 <div class="item">
                   <blockquote>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-                    <small>کسی معروف در <cite title="Source Title">شرکت شما</cite></small>
+                    <p>ترجمه شده:‌مشتر از امکاناتی که برای ما فراهم کردید</p>
+                    <small>مدیر عامل شرکت آقای Jerry Penacli <cite title="Source Title">شرکت DayTime</cite></small>
                   </blockquote>
                 </div>
                 <div class="item">
                   <blockquote>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-                    <small>کسی معروف در <cite title="Source Title">شرکت شما</cite></small>
+                    <p>بهترین طراحی سایتی که تا حالا باهشون کار رکردم</p>
+                    <small>مدیر موسسه آقای بهمنی <cite title="Source Title">موسسه خیریه نوآوری</cite></small>
                   </blockquote>
                 </div>
               </div>
@@ -328,92 +328,92 @@
 
         <section id="pricing" class="section section-center section-pricing">
             <div class="container">
-                <h2 class="section-title"><span>جدول قیمت گذاری آسان</span></h2>
+                <h2 class="section-title"><span>جدول قیمت گذاری وب سگمنت</span></h2>
                 <div class="pricing-table">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
-                            <div class="panel panel-default">
+                            <div class="panel panel-primary">
                                 <header class="panel-heading">
-                                    <h1>برنزی</h1>
-                                    <div class="the-price">10 هزار تومان <span class="subscript">/ ماه</span></div>
+                                    <h1>سایت فروشگاهی</h1>
+                                    <div class="the-price">غیره<span class="subscript">تا 3 میلیون تومان</span></div>
                                 </header>
                                 <div class="panel-body">
                                     <table class="table">
                                         <tbody>
-                                            <tr><td>یک کاربره</td></tr>
-                                            <tr class="active"><td>یک پروژه</td></tr>
+                                            <tr><td>پشتبی بانی کامل</td></tr>
+                                            <tr class="active"><td>مشاوره رایگان</td></tr>
                                             <tr><td>دسترسی</td></tr>
-                                            <tr class="active"><td>50 نگابایت فضا</td></tr>
-                                            <tr><td>سفارشی خدمات ابر</td></tr>
-                                            <tr class="active"><td>گزارش هفتگی</td></tr>
+                                            <tr class="active"><td> تحویل سریع </td></tr>
+                                            <tr><td> - </td></tr>
+                                            <tr class="active"><td> - </td></tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-default">ثبت نام کنید</a></footer>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="panel panel-default">
-                                <header class="panel-heading">
-                                    <h1>نقره ای</h1>
-                                    <div class="the-price">20 هزار تومان <span class="subscript">/ ماه</span></div>
-                                </header>
-                                <div class="panel-body">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr><td>یک کاربره</td></tr>
-                                            <tr class="active"><td>3 پروژه</td></tr>
-                                            <tr><td>دسترسی</td></tr>
-                                            <tr class="active"><td>100 مگابایت فضا</td></tr>
-                                            <tr><td>سفارشی خدمات ابر</td></tr>
-                                            <tr class="active"><td>گزارش هفتگی</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-default">ثبت نام کنید</a></footer>
+                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-default">سفارش دهید</a></footer>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="panel panel-primary">
                                 <header class="panel-heading">
-                                    <h1>طلایی</h1>
-                                    <div class="the-price">30 هزار تومان <span class="subscript">/ ماه</span></div>
+                                    <h1>سایت موزیک</h1>
+                                    <div class="the-price">1,600 هزارتومان <span class="subscript">تا 3 میلیون تومان</span></div>
                                 </header>
                                 <div class="panel-body">
                                     <table class="table">
                                         <tbody>
-                                            <tr><td>دو کاربره</td></tr>
-                                            <tr class="active"><td>5 پروژه</td></tr>
+                                            <tr><td></td></tr>
+                                            <tr class="active"><td>امکان دسترسی با ربات تلگرام</td></tr>
                                             <tr><td>دسترسی</td></tr>
-                                            <tr class="active"><td>200 مگابایت فضا</td></tr>
-                                            <tr><td>سفارشی خدمات ابر</td></tr>
-                                            <tr class="active"><td>گزارش هفتگی</td></tr>
+                                            <tr class="active"><td>100 گیگابایت فضای اولیه</td></tr>
+                                            <tr><td>پشتیبانی یک ساله<td></tr>
+                                            <tr class="active"><td>همراه با اپلیکیشن اندرویدی</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-primary">ثبت نام کنید</a></footer>
+                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-default">سفارش دهید</a></footer>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <div class="panel panel-default">
+                            <div class="panel panel-primary">
+                                <header class="panel-heading">
+                                    <h1>سایت شخصی</h1>
+                                    <div class="the-price">500 هزار تومان <span class="subscript"></span></div>
+                                </header>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr><td></td></tr>
+                                            <tr class="active"><td>اسکریپت اختصاصی</td></tr>
+                                            <tr><td>دامنه رایگان</td></tr>
+                                            <tr class="active"><td>200 مگابایت فضا</td></tr>
+                                            <tr><td>پشتی بانی یک ساله</td></tr>
+                                            <tr class="active"><td>چند زبانه</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-primary">سفارش دهید</a></footer>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="panel panel-primary">
                                 <header class="panel-heading">
                                     <h1>الماس</h1>
-                                    <div class="the-price">40 هزار تومان <span class="subscript">/ ماه</span></div>
+                                    <div class="the-price">1,200 هزار تومان <span class="subscript">تا 3 میلیون تومان</span></div>
                                 </header>
                                 <div class="panel-body">
                                     
                                     <table class="table">
                                         <tbody>
-                                            <tr><td>5 کاربره</td></tr>
-                                            <tr class="active"><td>20 پروژه</td></tr>
-                                            <tr><td>دسترسی</td></tr>
+                                            <tr><td>سایت فروشگاهی</td></tr>
+                                            <tr class="active"><td>اسکریپت اختصاصی</td></tr>
+                                            <tr><td>پوسته اختصاصی</td></tr>
                                             <tr class="active"><td>500 مگابایت فضا</td></tr>
-                                            <tr><td>خدمات ابری</td></tr>
+                                            <tr><td>پشتی بانی مادام العمر</td></tr>
                                             <tr class="active"><td>گزارش هفتگی</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-default">ثبت نام کنید</a></footer>
+                                <footer class="panel-footer"><a href="#" class="btn btn-block btn-default">سفارش دهید</a></footer>
                             </div>
                         </div>
                     </div>
@@ -426,8 +426,8 @@
                 <h2 class="section-title"><span>تیم شاد ما</span></h2>
                 <div class="row">
                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="http://placehold.it/300x300">
-                        <h5>ریحانه</h5>
+                        <img src="<?=base_url()?>/public/images/casablanca_th.jpg">
+                        <h5>ریحانه عباسی</h5>
                     </div>
                     
                     <div class="col-md-2 col-sm-4 col-xs-6">
@@ -444,12 +444,12 @@
                         <h5>حجت</h5>
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="http://placehold.it/300x300">
-                        <h5>عباس</h5>
+                        <img src="<?=base_url()?>/public/images/fardin.jpg">
+                        <h5>فردین</h5>
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="http://placehold.it/300x300">
-                        <h5>فردین</h5>
+                        <img src="<?=base_url()?>/public/images/arash.jpg">
+                        <h5>آرش حسینی</h5>
                     </div>
                 </div>
             </div>
@@ -512,22 +512,22 @@
             <h2 class="section-title"><span>مشتریان ما</span></h2>
             <div class="row">
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="http://placehold.it/165x80" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo6.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="http://placehold.it/165x80" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo5.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="http://placehold.it/165x80" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo4.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="http://placehold.it/165x80" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo3.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="http://placehold.it/165x80" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo2.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="http://placehold.it/165x80" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo1.jpg" alt="" /></a>
               </div>
             </div>
           </div>
@@ -536,7 +536,7 @@
         <section id="contact" class="section section-center section-contact">
           <div class="container">
             <h2 class="section-title"><span>تماس با ما</span></h2>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+            <p>Email: contactus@websegment.ir</p>
             <div class="main-action">
               <form method="post" action="contact.php" name="contactform" id="contactform">
                 <div class="results"></div>
@@ -590,33 +590,36 @@
 
               <aside class="widget col-md-3 col-sm-6">
                 <h5 class="widget-title">درباره ما</h5>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<a href="#">ادامه مطلب</a></p>
+                <p>درباره وب سگمنت بیشتر بدانید
+شرکت رسانه‌ تجارت وب سگمنت با هدف ارائه‌ی خدمات رایانه یی پردازش داده، طراحی و توسعه‌ی وب، اطلاع رسانی و انتقال فناوری نوین ارتباطات دیتا به عموم مردم، شرکت ها و سازمان‌ها تاسیس شده است. رسانه تجارت وب سگمنت استفاده از رایانه و اینترنت و راحت تر شدن کارها توسط آن را، حق تمام مردم می داند و خلاقیت و نوآوری را سر لوحه‌ی تلاش‌ها و فعالیت‌های خود قرار داده و معتقد است روزی خواهد رسید که برای شهروند کارآمد، استفاده از رایانه و اینترنت همان قدر ضرورت می یابد که توانایی خواندن و نوشتن اهمیت دارد.</p>
               </aside>
 
               <aside class="widget col-md-3 col-sm-6">
                 <h5 class="widget-title">تماس</h5>
                 <div class="textwidget">
                   <div class="adr">
-                    <div class="street-address">خیابان امام خمینی - خیابان فیاض بخش شمالی - فیاض بخش شمالی 2 - ساختمان علاالدین - طبقه +1</div>
-                    <span class="locality">نیشابور</span>,
-                    <abbr class="region" title="New York"></abbr>
+                    <div class="street-address"> </div>
+                    <span class="locality">شیراز</span>,
+                    <abbr class="region" title="شیراز"></abbr>
                     <span class="postal-code"></span>
                     <span class="country-name">ایران</span>
                   </div>
-                  <div>تلفن: <span class="tel">09360970585</span></div>
-                  <div>وبسایت: <a class="url" href="http://persianscript.ir">persianscript.ir</a></div>
+                  <div>ایمیل شخصی: <span class="tel">Email: Aminm96ir @ gmail.com</span></div>
+                  <div>ایمیل شخصی: <span class="tel">0933-565-7757</span></div>
+                  <div>وبسایت: <a class="url" href="http://websegment.ir">WebSegment.IR</a></div>
+                  <div>فروشگاه: <a class="url" href="http://shop.websegment.ir">Shop.WebSegment.IR</a></div>
                 </div>
               </aside>
 
               <aside class="widget col-md-3 col-sm-6">
                 <h5 class="widget-title">آیا به کمک نیاز دارید ؟</h5>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. <a href="#">ادامه مطلب</a></p>
+                <p>به ما ایمیل بزنید مشاوره ریگان است.</p>
               </aside>
 
               <aside class="widget col-md-3 col-sm-6">
                 <h5 class="widget-title">در تماس باشید</h5>
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="ایمیل شما">
+                  <input type="text" class="form-control" placeholder="info@websegment.ir">
                   <span class="input-group-btn">
                     <button class="btn btn-danger" type="button"><i class="fa fa-arrow-right"></i></button>
                   </span>
@@ -652,7 +655,7 @@
             </div>
           </div>
 
-          <div class="copyright"><p>© 2014 <br /> فارسی شده توسط: <a href="http://www.persianscript.ir">پرشین اسکریپت</a></p></div>
+          <div class="copyright"><p>© 2017 <br /> CopyRight All Reverse: <a href="http://www.websegment.ir">Web Segment</a></p></div>
         </div>
       </footer>
     </div>
