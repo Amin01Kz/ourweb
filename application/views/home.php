@@ -21,7 +21,7 @@
         <nav id="topbar" class="site-topbar visible-lg visible-md">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6">سوالی دارید ؟؟ با شماره من تماس بگیرید : 09360970585</div>
+              <div class="col-sm-6">سوالی دارید ؟؟ با ایمیل من تماس بگیرید: info@websegment.ir </div>
               <div class="social-links col-sm-6">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
