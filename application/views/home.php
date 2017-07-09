@@ -604,8 +604,8 @@
                     <span class="postal-code"></span>
                     <span class="country-name">ایران</span>
                   </div>
-                  <div>ایمیل شخصی: <span class="tel">Email: Aminm96ir @ gmail.com</span></div>
-                  <div>ایمیل شخصی: <span class="tel">0933-565-7757</span></div>
+                  <div>ایمیل: <span class="tel">Aminm96ir @ Gmail.com</span></div>
+                  <div>؛ایمیل <span class="tel">Armin.Najimi @ Gmail.com</span></div>
                   <div>وبسایت: <a class="url" href="http://websegment.ir">WebSegment.IR</a></div>
                   <div>فروشگاه: <a class="url" href="http://shop.websegment.ir">Shop.WebSegment.IR</a></div>
                 </div>
