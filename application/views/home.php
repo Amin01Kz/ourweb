@@ -464,7 +464,7 @@
                   <div class="row">
                     <div class="entry-thumbnail col-lg-4 col-md-5 col-sm-4">
                       <a href="#" class="hover-effect">
-                        <img src="http://placehold.it/165x165" alt="" />
+                        <img src="<?=base_url()?>/public/images/product1.gif" alt="" />
                         <span class="overlay"><i class="fa fa-plus"></i></span>
                       </a>
                     </div>
@@ -486,7 +486,7 @@
                   <div class="row">
                     <div class="entry-thumbnail col-lg-4 col-md-5 col-sm-4">
                       <a href="#" class="hover-effect">
-                        <img src="http://placehold.it/165x165" alt="" />
+                        <img src="<?=base_url()?>/public/images/product2.png" alt="" />
                         <span class="overlay"><i class="fa fa-plus"></i></span>
                       </a>
                     </div>
@@ -497,7 +497,7 @@
                       </header>
                       <div class="entry-content">
                         <p>اسکریپت طلایی فورشگاه فایل و محصولات شما با قیمت باور نکردنی همراه با اپلیکیشن...</p>
-                        <a href="#" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
+                        <a href="<?=base_url()?>/goto/product2" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
                       </div>
                     </div>
                   </div>
