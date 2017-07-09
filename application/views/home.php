@@ -431,17 +431,17 @@
                     </div>
                     
                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="http://placehold.it/300x300">
-                        <h5>مژگان</h5>
+                        <img src="<?=base_url()?>/public/images/mozhgan.jpg">
+                        <h5>مژگان حیدر زاده</h5>
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="http://placehold.it/300x300">
-                        <h5>محمد</h5>
+                        <img src="<?=base_url()?>/public/images/mohammad.jpg">
+                        <h5>محمد شیرازی</h5>
                     </div>
                     
                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="http://placehold.it/300x300">
-                        <h5>حجت</h5>
+                        <img src="<?=base_url()?>/public/images/hojjat.jpg">
+                        <h5>حجت درویش</h5>
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-6">
                         <img src="<?=base_url()?>/public/images/fardin.jpg">
@@ -512,7 +512,7 @@
             <h2 class="section-title"><span>مشتریان ما</span></h2>
             <div class="row">
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="<?=base_url()?>/public/images/logo6.jpg" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo7.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
                 <a href="#"><img src="<?=base_url()?>/public/images/logo5.jpg" alt="" /></a>
@@ -527,7 +527,7 @@
                 <a href="#"><img src="<?=base_url()?>/public/images/logo2.jpg" alt="" /></a>
               </div>
               <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="#"><img src="<?=base_url()?>/public/images/logo1.jpg" alt="" /></a>
+                <a href="#"><img src="<?=base_url()?>/public/images/logo6.png" alt="" /></a>
               </div>
             </div>
           </div>
@@ -562,12 +562,6 @@
                     </div>
                     <div class="form-group">
                       <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                          <img src="image.php" alt="Image verification" class="captcha-image">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input name="verify" type="text" id="verify" class="form-control" placeholder="کد در عکس را وارد کنید" required>
-                        </div>
                         <div class="col-md-3 col-sm-3 col-xs-12">
                           <button id="submit" type="submit" class="btn btn-default btn-block">ارسال</button>
                         </div>
