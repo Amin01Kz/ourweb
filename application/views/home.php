@@ -457,7 +457,7 @@
 
         <section id="blog" class="section section-blog">
           <div class="container">
-            <h2 class="section-title"><span>وبلاگ ما</span></h2>
+            <h2 class="section-title"><span>فروشگاه ما</span></h2>
             <div class="row">
               <div class="col-md-6">
                 <article class="hentry post">
@@ -470,12 +470,12 @@
                     </div>
                     <div class="col-lg-8 col-md-7 col-sm-8">
                       <header class="entry-header">
-                        <h2 class="entry-title"><a href="#">عنوان نمونه وبلاگ</a></h2>
-                        <div class="entry-meta">توسط <a href="#">حجت دهنوی</a> به <a href="#">دسته</a></div>
+                        <h2 class="entry-title"><a href="#">6 روش کسب درامد اینترنتی که شما از آن بی خبرید</a></h2>
+                        <div class="entry-meta">توسط <a href="#">ریحانه عباسی</a> به <a href="#">دسته</a></div>
                       </header>
                       <div class="entry-content">
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-                        <a href="#" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
+                        <p>آموزش کسب درامد از اینترنت با 6 روش با استاد فرزاد حسینی که 95 درصد مردم از آن بی خبرند و ... </p>
+                        <a href="<?=base_url()?>/goto/product1" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
                       </div>
                     </div>
                   </div>
@@ -492,11 +492,11 @@
                     </div>
                     <div class="col-lg-8 col-md-7 col-sm-8">
                       <header class="entry-header">
-                        <h2 class="entry-title"><a href="#">عنوان نمونه وبلاگ</a></h2>
+                        <h2 class="entry-title"><a href="#">اسکریپت فروشگاه محصول وفایل</a></h2>
                         <div class="entry-meta">توسط <a href="#">حجت دهنوی</a> به <a href="#">دسته</a></div>
                       </header>
                       <div class="entry-content">
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                        <p>اسکریپت طلایی فورشگاه فایل و محصولات شما با قیمت باور نکردنی همراه با اپلیکیشن...</p>
                         <a href="#" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
                       </div>
                     </div>
