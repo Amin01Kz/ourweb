@@ -536,21 +536,27 @@
         <section id="contact" class="section section-center section-contact">
           <div class="container">
             <h2 class="section-title"><span>تماس با ما</span></h2>
-            <p>Email: contactus@websegment.ir</p>
+
+            <?php 
+              $this->load->library('form_validation');
+              echo validation_errors('<p>', '</p>');
+              if( isset($msg) )  echo '<p>'.$msg.'</p>';
+            ?>
+            
             <div class="main-action">
-              <form method="post" action="contact.php" name="contactform" id="contactform">
+                  <?=form_open('contactus', 'name="contactform" id="contactform"')?>
                 <div class="results"></div>
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label class="sr-only">پیام</label>
-                      <textarea name="message" class="form-control" placeholder="پیام" style="height: 181px" rows="6" required></textarea>
+                      <textarea name="text" class="form-control" placeholder="پیام" style="height: 181px" rows="6" required></textarea>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label class="sr-only">عنوان</label>
-                      <input name="subject" type="text" class="form-control" placeholder="عنوان" required>
+                      <label class="sr-only">موضوع</label>
+                      <input name="title" type="text" class="form-control" placeholder="عنوان" required>
                     </div>
                     <div class="form-group">
                       <label class="sr-only">نام</label>
