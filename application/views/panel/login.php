@@ -1,3 +1,15 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="utf-8">
+        <title><?php if(isset($title)) echo $title;?></title>
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="<?=base_url()?>public/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?=base_url()?>public/assets/css/style.css">
+            <!-- JS -->
+        <script type="text/javascript" src="<?=base_url()?>/public/assets/js/bootstrap-3.1.1.min.js"></script>
+    </head>
 <body>
 
 <div class="container">
