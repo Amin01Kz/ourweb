@@ -34,7 +34,7 @@
                             <tr id='addr0'>
                                 <td> 1 </td>
                                 <td> <input type="text" name='name0'  placeholder='نمونه : صفحه تماس با ما' class="form-control"/> </td>
-                                <td> <input type="text" name='pric0' placeholder='مثال : 12,000' class="form-control"/> </td>
+                                <td> <input onkeyup="javascript:this.value=seprate(this.value);" type="text" name='pric0' placeholder='مثال : 12,000' class="form-control"/> </td>
                             </tr>
                             <tr id='addr1'></tr>
                         </tbody>
@@ -58,7 +58,7 @@
 $(document).ready(function() {
       var i=1;
      $("#add_row").click(function() {
-      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='مثال : قالب' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='مثال : 100,00'  class='form-control input-md'></td>");
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='مثال : قالب' class='form-control input-md'  /> </td><td><input onkeyup='javascript:this.value=seprate(this.value)' name='price"+i+"' type='text' placeholder='مثال : 100,00'  class='form-control input-md'></td>");
 
       $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
       i++; 
@@ -69,8 +69,20 @@ $(document).ready(function() {
 		 i--;
 		 }
 	 });
-
 });
+
+function seprate(Number) {
+	Number+= '';
+	Number= Number.replace(',', ''); Number= Number.replace(',', ''); Number= Number.replace(',', '');
+	Number= Number.replace(',', ''); Number= Number.replace(',', ''); Number= Number.replace(',', '');
+	x = Number.split('.');
+	y = x[0];
+	z= x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(y))
+		y= y.replace(rgx, '$1' + ',' + '$2');
+	return y+ z;
+}
 </script>
 </body>
 </html>

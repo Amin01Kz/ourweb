@@ -545,7 +545,7 @@
             ?>
             
             <div class="main-action">
-                  <?=form_open('contactus')?>
+                  <?=form_open('contactus', 'id="form-contactus"')?>
                 <div class="results"></div>
                 <div class="row">
                   <div class="col-sm-6">
@@ -668,5 +668,7 @@
     <script type="text/javascript" src="<?=base_url()?>/public/assets/js/jquery.isotope.min.js?v=1.5.26"></script>
     <script type="text/javascript" src="<?=base_url()?>/public/assets/js/jquery.singlePageNav.min.js"></script>
     <script type="text/javascript" src="<?=base_url()?>/public/assets/js/main.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>/public/assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>/public/assets/js/my-validate.js"></script>
   </body>
 </html>

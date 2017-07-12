@@ -41,7 +41,7 @@
                                 <tr id='addr<?=$i?>'>
                                     <td> <?=$i?> </td>
                                     <td> <input value="<?=$row->title?>" type="text" name='name<?=$i?>'  placeholder='نمونه : صفحه تماس با ما' class="form-control"/> </td>
-                                    <td> <input value="<?=$row->price?>" type="text" name='pric<?=$i?>' placeholder='مثال : 12,000' class="form-control"/> </td>
+                                    <td> <input onkeyup="javascript:this.value=seprate(this.value);" value="<?=$row->price?>" type="text" name='pric<?=$i?>' placeholder='مثال : 12,000' class="form-control"/> </td>
                                 </tr>
                             <?php $total+=$row->price; $i++; } ?>
                             <tr id='addr2'></tr>
@@ -68,7 +68,7 @@
 $(document).ready(function() {
       var i = <?=$i++?>;
      $("#add_row").click(function() {
-      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='مثال : قالب' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='مثال : 100,00'  class='form-control input-md'></td>");
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='مثال : قالب' class='form-control input-md'  /> </td><td><input onkeyup='javascript:this.value=seprate(this.value);' name='price"+i+"' type='text' placeholder='مثال : 100,00'  class='form-control input-md'></td>");
 
       $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
       i++; 
@@ -81,6 +81,19 @@ $(document).ready(function() {
 	 });
 
 });
+
+function seprate(Number) {
+	Number+= '';
+	Number= Number.replace(',', ''); Number= Number.replace(',', ''); Number= Number.replace(',', '');
+	Number= Number.replace(',', ''); Number= Number.replace(',', ''); Number= Number.replace(',', '');
+	x = Number.split('.');
+	y = x[0];
+	z= x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(y))
+		y= y.replace(rgx, '$1' + ',' + '$2');
+	return y+ z;
+}
 </script>
 </body>
 </html>
