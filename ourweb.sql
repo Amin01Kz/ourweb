@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2017 at 03:23 PM
+-- Generation Time: Jul 12, 2017 at 02:17 PM
 -- Server version: 5.7.18-0ubuntu0.16.04.1
 -- PHP Version: 7.0.18-0ubuntu0.16.04.1
 
@@ -47,6 +47,7 @@ CREATE TABLE `factors` (
   `name` varchar(200) COLLATE utf8_persian_ci NOT NULL,
   `description` text COLLATE utf8_persian_ci NOT NULL,
   `phone` varchar(20) COLLATE utf8_persian_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_persian_ci DEFAULT NULL,
   `paid` tinyint(1) NOT NULL DEFAULT '0',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
@@ -55,9 +56,8 @@ CREATE TABLE `factors` (
 -- Dumping data for table `factors`
 --
 
-INSERT INTO `factors` (`id`, `code`, `receipt_code`, `name`, `description`, `phone`, `paid`, `date`) VALUES
-(2, 'asas', '123', 'asasas', 'dafsadfas', '09335657757', 0, '2017-06-14 17:08:49'),
-(3, 'amin', '5664653', 'محمد امین', '', '+989335657757', 0, '2017-06-28 12:53:41');
+INSERT INTO `factors` (`id`, `code`, `receipt_code`, `name`, `description`, `phone`, `email`, `paid`, `date`) VALUES
+(7, 'asd', '32432', 'علی رصا', 'سایت فلانsdfsdf', '09173080016', 'amin@amin.com', 0, '2017-07-12 09:21:27');
 
 -- --------------------------------------------------------
 
@@ -77,9 +77,28 @@ CREATE TABLE `factor_items` (
 --
 
 INSERT INTO `factor_items` (`id`, `factor_id`, `title`, `price`) VALUES
-(1, 2, 'sdfsdfsdfsdf', 1000),
-(2, 3, 'سیو فلان', 50000),
+(1, 5, 'sdfsdfsdfsdf', 1000),
+(2, 5, 'سیو فلان', 50000),
 (3, 3, 'قالب اماده', 10000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) COLLATE utf8_bin NOT NULL,
+  `password` varchar(50) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`) VALUES
+(1, 'amin@amin.com', 'fe44c8513f722779c557089ac8ec54f2');
 
 --
 -- Indexes for dumped tables
@@ -104,6 +123,12 @@ ALTER TABLE `factor_items`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -116,12 +141,17 @@ ALTER TABLE `contactus`
 -- AUTO_INCREMENT for table `factors`
 --
 ALTER TABLE `factors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `factor_items`
 --
 ALTER TABLE `factor_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
