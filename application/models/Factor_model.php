@@ -22,14 +22,24 @@ class Factor_model extends CI_Model {
         return ["not_exist"];
     }
 
-    public function get_factor($data){
-        $query = $this->db->get_where('factors', $data)->result()[0];
+    public function get_factor($id) {
+        $query[0] = $this->db->get_where('factors', ['id' => $id])->result()[0];
+        $query[1] = $this->db->get_where('factor_items', ['factor_id' => $id])->result();
         return $query;
     }
 
-    public function update($id, $data){
+    public function get_all_factors() {
+        return $this->db->get('factors')->result();
+    }
+
+    public function delete_by_id($id) {
+        $this->db->where('id', $id);
+        return $this->db->delete('factors');
+    }
+
+    public function update_by_id($id, $data) {
         $this->db->set($data);
         $this->db->where('id', $id);
-        $this->db->update('factors');
+        return $this->db->update('factors');
     }
 }

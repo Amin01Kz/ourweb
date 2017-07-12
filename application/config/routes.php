@@ -49,11 +49,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'HomeController';
-$route['factor/payback']['POST']= 'FactorController/payback';
-$route['factor/payback']['GET']	= 'FactorController/payback';
-$route['factor/(:any)']['GET']	= 'FactorController/index/$1';
-$route['factor/(:any)']['POST'] = 'FactorController/index/$1';
-$route['contactus']['POST']     = 'HomeController/contactUs';
+$route['default_controller']                = 'HomeController';
+$route['factor/payback']['POST']            = 'FactorController/payback';
+$route['factor/payback']['GET']	            = 'FactorController/payback';
+$route['factor/(:any)']['GET']	            = 'FactorController/index/$1';
+$route['factor/(:any)']['POST']             = 'FactorController/index/$1';
+$route['contactus']['POST']                 = 'HomeController/contactUs';
+$route['panel']['GET']                      = 'PanelController/index';
+$route['panel/login']['GET']                = 'UserController/index';
+$route['panel/login']['POST']               = 'UserController/login';
+$route['panel/logout']['GET']               = 'UserController/logout';
+$route['panel/factor/new']['GET']           = 'FactorController/new';
+$route['panel/factor/edit/(:any)']['GET']   = 'FactorController/edit/$1';
+$route['panel/factor/edit']['POST']         = 'FactorController/update'; 
+$route['panel/factor/show']['GET']          = 'FactorController/show';
+$route['panel/factor/delete/(:any)']['GET'] = 'FactorController/delete/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

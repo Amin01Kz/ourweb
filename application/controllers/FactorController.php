@@ -3,21 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class FactorController extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index($code)
 	{
 		$this->load->model('Factor_model');
@@ -82,6 +67,69 @@ class FactorController extends CI_Controller {
 			default:
 				show_404();
 				break;
+		}
+	}
+
+	public function new() {
+		if(!isset($this->session->userdata['logged_in'])) return show_404();
+		$data['title'] = "ساخت فاکتور جدید";
+		$this->load->view('panel/header', $data);
+		$this->load->view('panel/create_factor');
+	}
+
+	public function show() {
+		if(!isset($this->session->userdata['logged_in'])) return show_404();
+		$this->load->model('Factor_model');
+		$result['factors'] = $this->Factor_model->get_all_factors();
+		$i = 0; foreach($result['factors'] as $row) $i++;
+		$data['title'] = 'فاکتور ها';
+		$data['totalFactors'] = $i;
+		$this->load->view('panel/header', $data);
+		$this->load->view('panel/show_factors', $result);
+	}
+
+	public function edit($id) {
+		if(!isset($this->session->userdata['logged_in'])) return show_404();
+		$this->load->model('Factor_model');
+		$result = $this->Factor_model->get_factor($id);
+		$f['factor'] = $result[0];
+		$f['items']  = $result[1];
+		$data['title'] = 'ویرایش فاکتور';
+		$this->load->view('panel/header', $data);
+		$this->load->view('panel/edit_factor', $f);
+	}
+
+	public function delete($id) {
+		if(!isset($this->session->userdata['logged_in'])) return show_404();
+		$this->load->model('Factor_model');
+		$flag = $factor = $this->Factor_model->delete_by_id($id);
+
+		if( $flag ) 
+			$this->session->set_flashdata('success_msg', 'فاکتور با موفقیت حذف شد');
+		else
+			$this->session->set_flashdata('error_msg', 'مشکلی در حذف فاکتور پیش آمد');
+
+		redirect( base_url('index.php/panel/factor/show') );
+	}
+
+	public function update() {
+		
+		if(!isset($this->session->userdata['logged_in'])) return show_404();
+		$this->load->model('Factor_model');
+		$data = [
+			'name' 		  => $this->input->post('name'),
+			'email'		  => $this->input->post('email'),
+			'phone'		  => $this->input->post('phone'),
+			'description' => $this->input->post('description'),
+		];
+		$id = $this->input->post('id');
+		$flag = $this->Factor_model->update_by_id($id, $data);
+		if( !$flag ) {
+			$this->session->set_flashdata('error_msg', 'خطایی در هنگام به روز رسانی فاکتور رخ داد');
+			redirect( base_url('index.php/panel/factor/edit/'.$id) );
+		} else {
+			$this->session->set_flashdata('success_msg', 'به روز رسانی با موفقیت انجام گردید');
+			redirect( base_url('index.php/panel/factor/show') );
 		}
 	}
 
