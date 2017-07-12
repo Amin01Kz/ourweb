@@ -539,12 +539,13 @@
 
             <?php 
               $this->load->library('form_validation');
+              $this->load->helper(['url']);
               echo validation_errors('<p>', '</p>');
               if( isset($msg) )  echo '<p>'.$msg.'</p>';
             ?>
             
             <div class="main-action">
-                  <?=form_open('contactus', 'name="contactform" id="contactform"')?>
+                  <?=form_open('contactus')?>
                 <div class="results"></div>
                 <div class="row">
                   <div class="col-sm-6">
@@ -556,7 +557,7 @@
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label class="sr-only">موضوع</label>
-                      <input name="title" type="text" class="form-control" placeholder="عنوان" required>
+                      <input name="subject" type="text" class="form-control" placeholder="عنوان" required>
                     </div>
                     <div class="form-group">
                       <label class="sr-only">نام</label>

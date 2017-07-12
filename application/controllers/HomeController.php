@@ -25,34 +25,38 @@ class HomeController extends CI_Controller {
 
 	public function contactUs() {
 
-		$this->load->library('form_validation');
+		// $this->load->library('form_validation');
 
-		$this->form_validation->set_rules('title', 'Title', 'trim|required', [
-			'required' => 'موضوع پیام را وارد نکرده اید'
-		]);
-		$this->form_validation->set_rules('text', 'Text', 'trim|required', [
-			'required' => 'پیام خالی است'
-		]);
-		$this->form_validation->set_rules('name', 'Name', 'trim|required', [
-			'required' => 'نام شما وارد نشده است'
-		]);
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', [
-			'required' => 'ایمیل وارد نشده است'
-		]);
+		// $this->form_validation->set_rules('title', 'Title', 'trim|required', [
+		// 	'required' => 'موضوع پیام را وارد نکرده اید'
+		// ]);
+		// $this->form_validation->set_rules('text', 'Text', 'trim|required', [
+		// 	'required' => 'پیام خالی است'
+		// ]);
+		// $this->form_validation->set_rules('name', 'Name', 'trim|required', [
+		// 	'required' => 'نام شما وارد نشده است'
+		// ]);
+		// $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', [
+		// 	'required' => 'ایمیل وارد نشده است'
+		// ]);
 
-		if ($this->form_validation->run() === FALSE) {
-			$this->load->view('home', $data);
-		} else {
+		// if ($this->form_validation->run() === FALSE) {
+		// 	$this->load->view('home', $data);
+		// } else {
 			$this->load->model('Home_model');
-			
-			$flag = $this->news_model->insert_contactUs();
+			$data = [
+				'subject' => $_POST['subject'],
+				'name'    => $_POST['name'],
+				'email'   => $_POST['email'],
+				'text'    => $_POST['text']
+			];
+			$flag = $this->Home_model->insert_contactUs($data);
 
 			$data['msg'] = 'پیام شما با موفقیت ارسال شد';
 			if($flag) 
 				return $this->load->view('home', $data);
 			else
 				return $this->load->view('errors/error_db');
-		}
 
 	}
 }
