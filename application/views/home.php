@@ -50,6 +50,7 @@
                 <li><a href="#blog">وبلاگ</a></li>
                 <li><a href="#clients">مشتریان</a></li>
                 <li><a href="#contact">تماس</a></li>
+                <li><a href="<?=base_url('index.php/contactus')?>">ارتباط با ما</a></li>
               </ul>
             </div>
           </div>

@@ -23,26 +23,11 @@ class HomeController extends CI_Controller {
 		$this->load->view('home');
 	}
 
-	public function contactUs() {
+	public function getContactus() {
+		$this->load->view('contactus');
+	}
 
-		// $this->load->library('form_validation');
-
-		// $this->form_validation->set_rules('title', 'Title', 'trim|required', [
-		// 	'required' => 'موضوع پیام را وارد نکرده اید'
-		// ]);
-		// $this->form_validation->set_rules('text', 'Text', 'trim|required', [
-		// 	'required' => 'پیام خالی است'
-		// ]);
-		// $this->form_validation->set_rules('name', 'Name', 'trim|required', [
-		// 	'required' => 'نام شما وارد نشده است'
-		// ]);
-		// $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', [
-		// 	'required' => 'ایمیل وارد نشده است'
-		// ]);
-
-		// if ($this->form_validation->run() === FALSE) {
-		// 	$this->load->view('home', $data);
-		// } else {
+	public function postContactus() {
 			$this->load->model('Home_model');
 			$data = [
 				'subject' => $_POST['subject'],
@@ -57,6 +42,5 @@ class HomeController extends CI_Controller {
 				return $this->load->view('home', $data);
 			else
 				return $this->load->view('errors/error_db');
-
 	}
 }
