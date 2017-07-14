@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شروع</title>
+    <title>وب سگمنت</title>
     <link href="<?=base_url()?>/public/assets/css/template.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -61,14 +61,8 @@
 
         <section id="carousel-1" class="carousel slide section-slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="item active" style="background: url();">
-              <div class="container"><img src="<?=base_url()?>/public/images/slider2.jpeg" alt="First slide"></div>
-            </div>
-            <div class="item" style="background: url();">
-              <div class="container"><img src="<?=base_url()?>/public/images/slider3.png" alt="Second slide"></div>
-            </div>
-            <div class="item" style="background: url();">
-              <div class="container"><img src="<?=base_url()?>/public/images/slider4.png" alt="Third slide"></div>
+            <div class="item active" style="padding: 0">
+              <img src="<?=base_url('public/images/1.jpg')?>" style="width: 100%">
             </div>
           </div>
           <a class="left carousel-control" href="#carousel-1" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
@@ -93,7 +87,7 @@
 
               <div class="col-md-4 col-sm-6">
                 <div class="icon-wrap"><img src="<?=base_url()?>/public/images/icon-comments-flat.png" alt=""></div>
-                <h4>پشتی بانی</h4>
+                <h4>پشتیبانی</h4>
                 <p>تمام تلاش ما بر این است که محیط کاربری و مدیریت وب سایت ساده و راحت باشد اما چنانچه زمان کافی برای مدیریت و بروزرسانی وب سایت خود را ندارید می توانید این کار را به ما بسپارید .
 ما این مسئولیت را بر عهده خواهیم گرفت</p>
               </div>
@@ -131,94 +125,6 @@
             </div>
           </div>
         </section>
-
-        <section id="portfolio" class="section section-portfolio">
-          <div class="container">
-            <h2 class="section-title"><span>آثار اخیر.</span></h2>
-            <ul id="filters">
-              <li><a href="#" data-filter="*">همه</a></li>
-              <li>/</li>
-              <li><a href="#" data-filter=".web">طراحی وب</a></li>
-              <li>/</li>
-              <li><a href="#" data-filter=".graphic">طراحی گرافیک</a></li>
-              <li>/</li>
-              <li><a href="#" data-filter=".photography">عکاسی</a></li>
-              <li>/</li>
-              <li><a href="#" data-filter=".motion">برنامه نویسی</a></li>
-              <li>/</li>
-              <li><a href="#" data-filter=".branding">بهینه سازی وب</a></li>
-            </ul>
-
-            <div class="portfolio-isotope row">
-              <article class="col-md-3 col-sm-6 portfolio-item branding photography web">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-1.jpg" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item motion graphic">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-1.jpg" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item branding web">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-3.jpg" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item photography graphic">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-2.png" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item motion web">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-3.jpg" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item branding graphic">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-1.jpg" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item motion photography web">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-3.jpg" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6 portfolio-item photography motion branding graphic">
-                <div class="entry-thumbnail">
-                  <a href="#" class="hover-effect" data-toggle="modal" data-target="#project-modal">
-                    <img src="<?=base_url()?>/public/images/single-project-2.png" alt="" />
-                    <span class="overlay"><i class="fa fa-plus"></i></span>
-                  </a>
-                </div>
-              </article>
-            </div>
-
-          </div>
-        </section>
-
         <!-- Project Modal -->
         <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-label" aria-hidden="true">
           <div class="modal-dialog">
@@ -387,7 +293,7 @@
                                             <tr class="active"><td>اسکریپت اختصاصی</td></tr>
                                             <tr><td>دامنه رایگان</td></tr>
                                             <tr class="active"><td>200 مگابایت فضا</td></tr>
-                                            <tr><td>پشتی بانی یک ساله</td></tr>
+                                            <tr><td>پشتیبانی یک ساله</td></tr>
                                             <tr class="active"><td>چند زبانه</td></tr>
                                         </tbody>
                                     </table>
@@ -409,7 +315,7 @@
                                             <tr class="active"><td>اسکریپت اختصاصی</td></tr>
                                             <tr><td>پوسته اختصاصی</td></tr>
                                             <tr class="active"><td>500 مگابایت فضا</td></tr>
-                                            <tr><td>پشتی بانی مادام العمر</td></tr>
+                                            <tr><td>پشتیبانی مادام العمر</td></tr>
                                             <tr class="active"><td>گزارش هفتگی</td></tr>
                                         </tbody>
                                     </table>
@@ -420,92 +326,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="team" class="section section-center section-hilite section-team">
-            <div class="container">
-                <h2 class="section-title"><span>تیم شاد ما</span></h2>
-                <div class="row">
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="<?=base_url()?>/public/images/casablanca_th.jpg">
-                        <h5>ریحانه عباسی</h5>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="<?=base_url()?>/public/images/mozhgan.jpg">
-                        <h5>مژگان حیدر زاده</h5>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="<?=base_url()?>/public/images/mohammad.jpg">
-                        <h5>محمد شیرازی</h5>
-                    </div>
-                    
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="<?=base_url()?>/public/images/hojjat.jpg">
-                        <h5>حجت درویش</h5>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="<?=base_url()?>/public/images/fardin.jpg">
-                        <h5>فردین</h5>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <img src="<?=base_url()?>/public/images/arash.jpg">
-                        <h5>آرش حسینی</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="section section-blog">
-          <div class="container">
-            <h2 class="section-title"><span>فروشگاه ما</span></h2>
-            <div class="row">
-              <div class="col-md-6">
-                <article class="hentry post">
-                  <div class="row">
-                    <div class="entry-thumbnail col-lg-4 col-md-5 col-sm-4">
-                      <a href="#" class="hover-effect">
-                        <img src="<?=base_url()?>/public/images/product1.gif" alt="" />
-                        <span class="overlay"><i class="fa fa-plus"></i></span>
-                      </a>
-                    </div>
-                    <div class="col-lg-8 col-md-7 col-sm-8">
-                      <header class="entry-header">
-                        <h2 class="entry-title"><a href="#">6 روش کسب درامد اینترنتی که شما از آن بی خبرید</a></h2>
-                        <div class="entry-meta">توسط <a href="#">ریحانه عباسی</a> به <a href="#">دسته</a></div>
-                      </header>
-                      <div class="entry-content">
-                        <p>آموزش کسب درامد از اینترنت با 6 روش با استاد فرزاد حسینی که 95 درصد مردم از آن بی خبرند و ... </p>
-                        <a href="<?=base_url()?>/goto/product1" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-md-6">
-                <article class="hentry post">
-                  <div class="row">
-                    <div class="entry-thumbnail col-lg-4 col-md-5 col-sm-4">
-                      <a href="#" class="hover-effect">
-                        <img src="<?=base_url()?>/public/images/product2.png" alt="" />
-                        <span class="overlay"><i class="fa fa-plus"></i></span>
-                      </a>
-                    </div>
-                    <div class="col-lg-8 col-md-7 col-sm-8">
-                      <header class="entry-header">
-                        <h2 class="entry-title"><a href="#">اسکریپت فروشگاه محصول وفایل</a></h2>
-                        <div class="entry-meta">توسط <a href="#">حجت دهنوی</a> به <a href="#">دسته</a></div>
-                      </header>
-                      <div class="entry-content">
-                        <p>اسکریپت طلایی فورشگاه فایل و محصولات شما با قیمت باور نکردنی همراه با اپلیکیشن...</p>
-                        <a href="<?=base_url()?>/goto/product2" class="more"><span class="btn btn-primary">ادامه مطلب</span></a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section id="clients" class="section section-hilite section-our-clients">
@@ -606,8 +426,7 @@
                     <span class="postal-code"></span>
                     <span class="country-name">ایران</span>
                   </div>
-                  <div>ایمیل: <span class="tel">Aminm96ir @ Gmail.com</span></div>
-                  <div>؛ایمیل <span class="tel">Armin.Najimi @ Gmail.com</span></div>
+                  <div>ایمیل: <span class="tel">info@websegment.ir</span></div>
                   <div>وبسایت: <a class="url" href="http://websegment.ir">WebSegment.IR</a></div>
                   <div>فروشگاه: <a class="url" href="http://shop.websegment.ir">Shop.WebSegment.IR</a></div>
                 </div>
@@ -632,26 +451,6 @@
                   <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                   <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
-              </aside>
-
-            </div>
-          </div>
-
-          <div id="sidebar-footer-2">
-            <div class="row">
-
-              <aside class="widget col-sm-6">
-                <h5 class="widget-title">آخرین توییت</h5>
-                <div class="tweet">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br />– حجت دهنوی –
-                </div>
-              </aside>
-
-              <aside class="widget widget_flickr col-sm-6">
-                <h5 class="widget-title">آخرین عکس ها</h5>
-                <a href="#" class="hover-effect"><img src="http://placehold.it/100x100" /><span class="overlay"><i class="fa fa-plus"></i></span></a>
-                <a href="#" class="hover-effect"><img src="http://placehold.it/100x100" /><span class="overlay"><i class="fa fa-plus"></i></span></a>
-                <a href="#" class="hover-effect"><img src="http://placehold.it/100x100" /><span class="overlay"><i class="fa fa-plus"></i></span></a>
               </aside>
 
             </div>
